@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nodeapp
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: nodeapp
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nodeapp
-        image: deadloop/nodeapp:32c9352862c52cf9767ee63340a118d8bf6ef425
+        image: deadloop/nodeapp:tagVersion
         ports:
         - containerPort: 8080
