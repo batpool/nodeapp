@@ -10,4 +10,4 @@ spec:
     port: 80
     targetPort: 8080
   # type: LoadBalancer (if its a cloud provider like AWS, GCP, DigitalOcean)
-  type: NodePort
+  type: ClusterIP
