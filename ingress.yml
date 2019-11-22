@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+  - host: ok.com # add this to /etc/hosts
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nodeapp
+          servicePort: 80
